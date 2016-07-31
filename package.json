@@ -1,7 +1,7 @@
 {
     "name": "vscode-PolymerSnippets",
     "displayName": "Polymer Snippets for VSCode",
-    "description": "Polymer Snippets for VSCode based on Atom Polymer Snippets by Rob Dodson",
+    "description": "Polymer Snippets for VSCode based on Atom Polymer Snippets and Sublime Polymer Snippets by Rob Dodson",
     "version": "0.0.1",
     "publisher": "NgekNgok",
     "engines": {
