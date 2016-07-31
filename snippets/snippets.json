@@ -1,0 +1,386 @@
+{
+	"app-location": {
+		"prefix": "app-location",
+		"body": "\r\n<app-location route=\"{{${1:route}}}\" ${2:use-hash-as-path}></app-location>\r\n",
+		"description": "",
+		"scope": "text.html"
+	},
+	"app-route": {
+		"prefix": "app-route",
+		"body": "\r\n<app-route route=\"{{${1:route}}}\" pattern=\"/:${2:page}\" data=\"{{${3:data}}}\" tail=\"{{${4:tail}}}\"></app-route>\r\n",
+		"description": "",
+		"scope": "text.html"
+	},
+	"arrsel": {
+		"prefix": "arrsel",
+		"body": "\r\n<array-selector id=\"${1:selector}\" \r\n\titems=\"{{${2:array}}}\" selected=\"{{${3:selected}}}\" \r\n\t${4:multi} ${5:toggle}>\r\n</array-selector>\r\n$0\r\n",
+		"description": "Array selector",
+		"scope": "text.html"
+	},
+	"carbon-location": {
+		"prefix": "carbon-location",
+		"body": "\r\n<carbon-location route=\"{{${1:route}}}\" ${2:use-hash-as-path}></carbon-location>\r\n",
+		"description": "",
+		"scope": "text.html"
+	},
+	"carbon-route": {
+		"prefix": "carbon-route",
+		"body": "\r\n<carbon-route route=\"{{${1:route}}}\" pattern=\"/:${2:page}\" data=\"{{${3:data}}}\" tail=\"{{${4:tail}}}\"></carbon-route>\r\n",
+		"description": "",
+		"scope": "text.html"
+	},
+	"ce": {
+		"prefix": "ce",
+		"body": "\r\nvar ${4:tmpl} = document.querySelector('${5:template}');\r\n\r\nvar ${1:WidgetProto} = Object.create(HTMLElement.prototype);\r\n\r\n${1:WidgetProto}.createdCallback = function() {\r\n\tvar root = this.createShadowRoot();\r\n\troot.appendChild(document.importNode(${4:tmpl}.content, true));\r\n};\r\n\r\nvar ${2:Widget} = document.registerElement('${3:my-widget}', {\r\n\tprototype: ${1:WidgetProto}\r\n});\r\n",
+		"description": "",
+		"scope": "source.js"
+	},
+	"fba": {
+		"prefix": "fba",
+		"body": "\r\n<firebase-auth \r\n\tid=\"${1:firebaseAuth}\" \r\n\tuser=\"{{${2:user}}}\"\r\n\tstatus-known=\"{{${3:statusKnown}}}\" \r\n\tlocation=\"https://${4:<YOUR-FIREBASE-APP>}.firebaseio.com\" \r\n\tprovider=\"{{${5:provider}}}\" \r\n\ton-error=\"${6:errorHandler}\" \r\n\ton-user-created=\"${7:userSuccessHandler}\" \r\n\ton-password-changed=\"${7:userSuccessHandler}\" \r\n\ton-password-reset=\"${7:userSuccessHandler}\" \r\n\ton-user-removed=\"${7:userSuccessHandler}\">\r\n</firebase-auth>\r\n$0\r\n",
+		"description": "Element for Firebase authentication API",
+		"scope": "text.html"
+	},
+	"hii": {
+		"prefix": "hii",
+		"body": "\r\n<link rel=\"import\" href=\"${1:bower_components}/iron-${2}/iron-${2}.html\">\r\n",
+		"description": "import iron-element",
+		"scope": "text.html"
+	},
+	"hip": {
+		"prefix": "hip",
+		"body": "\r\n<link rel=\"import\" href=\"${1:bower_components}/paper-${2}/paper-${2}.html\">\r\n",
+		"description": "import paper-element",
+		"scope": "text.html"
+	},
+	"hi": {
+		"prefix": "hi",
+		"body": "\r\n<link rel=\"import\" href=\"${1:bower_components}/${0}/${0}.html\">\r\n",
+		"description": "html import",
+		"scope": "text.html"
+	},
+	"ph": {
+		"prefix": "ph",
+		"body": "\r\n<!DOCTYPE html>\r\n<html>\r\n<head>\r\n\t<meta charset=\"utf-8\">\r\n\r\n\t<title>${1}</title>\r\n\t<meta name=\"description\" content=\"${2}\">\r\n\r\n\t<!-- Mobile -->\r\n\t<meta name=\"viewport\" content=\"width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes\">\r\n\r\n\t<!-- Chrome / Android -->\r\n\t<meta name=\"mobile-web-app-capable\" content=\"yes\">\r\n\t<meta name=\"theme-color\" content=\"black\">\r\n\t<link rel=\"icon\" href=\"icon.png\">\r\n\r\n\t<!-- Safari / iOS -->\r\n\t<meta name=\"apple-mobile-web-app-capable\" content=\"yes\">\r\n\t<meta name=\"apple-mobile-web-app-status-bar-style\" content=\"black\">\r\n\t<link rel=\"apple-touch-icon-precomposed\" href=\"apple-touch-icon.png\">\r\n\r\n\t<!-- Web Components -->\r\n\t<script src=\"bower_components/webcomponentsjs/webcomponents-lite.js\"></script>\r\n</head>\r\n<body unresolved>\r\n\t$0\r\n</body>\r\n</html>\r\n",
+		"description": "polymer html boilerplate",
+		"scope": "text.html"
+	},
+	"iron-a11y-keys": {
+		"prefix": "iron-a11y-keys",
+		"body": "\r\n<iron-a11y-keys target=\"${1:\\{\\{\\}\\}}\" keys=\"${2:up down left right}\" on-keys-pressed=\"{{${3:arrowHandler}}}\"></iron-a11y-keys>\r\n",
+		"description": "",
+		"scope": "text.html"
+	},
+	"iron-ajax": {
+		"prefix": "iron-ajax",
+		"body": "\r\n<iron-ajax\r\n \t${1:auto}\r\n \turl=\"${2}\"\r\n \thandle-as=\"${3:json}\"\r\n \ton-response=\"${4:handleResponse}\"></iron-ajax>\r\n",
+		"description": "",
+		"scope": "text.html"
+	},
+	"iron-autogrow-textarea": {
+		"prefix": "iron-autogrow-textarea",
+		"body": "\r\n<iron-autogrow-textarea>\r\n\t<textarea></textarea>\r\n</iron-autogrow-textarea>\r\n",
+		"description": "",
+		"scope": "text.html"
+	},
+	"iron-collapse": {
+		"prefix": "iron-collapse",
+		"body": "\r\n<iron-collapse id=\"${1:collapse}\">\r\n\tContent goes here...\r\n</iron-collapse>\r\n",
+		"description": "",
+		"scope": "text.html"
+	},
+	"iron-doc-viewer": {
+		"prefix": "iron-doc-viewer",
+		"body": "\r\n<iron-doc-viewer descriptor=\"{{${1:elementDescriptor}}}\"></iron-doc-viewer>\r\n",
+		"description": "",
+		"scope": "text.html"
+	},
+	"iron-form": {
+		"prefix": "iron-form",
+		"body": "\r\n<form is=\"iron-form\" id=\"${1:form}\" method=\"${2:post}\" action=\"${3:/form/handler}\">\r\n\t$0\r\n</form>\r\n",
+		"description": "",
+		"scope": "text.html"
+	},
+	"iron-icon": {
+		"prefix": "iron-icon",
+		"body": "\r\n<iron-icon icon=\"$0\"></iron-icon>\r\n",
+		"description": "",
+		"scope": "text.html"
+	},
+	"iron-iconset-svg": {
+		"prefix": "iron-iconset-svg",
+		"body": "\r\n<iron-iconset-svg name=\"${1:my-icons}\" size=\"${0:24}\">\r\n\t$0\r\n</iron-iconset-svg>\r\n",
+		"description": "",
+		"scope": "text.html"
+	},
+	"iron-iconset": {
+		"prefix": "iron-iconset",
+		"body": "\r\n<iron-iconset name=\"${1:my-icons}\" src=\"${2:my-icons.png}\" width=\"${3:96}\" size=\"${4:24}\"\r\n\t\ticons=\"${5:location place starta stopb bus car train walk}\">\r\n</iron-iconset>\r\n",
+		"description": "",
+		"scope": "text.html"
+	},
+	"iron-image": {
+		"prefix": "iron-image",
+		"body": "\r\n<iron-image src=\"$1\" ${2:preload} sizing=\"${3:cover}\"></iron-image>\r\n",
+		"description": "",
+		"scope": "text.html"
+	},
+	"iron-input": {
+		"prefix": "iron-input",
+		"body": "\r\n<input is=\"iron-input\" bind-value=\"{{${1:myValue}}}\">\r\n",
+		"description": "",
+		"scope": "text.html"
+	},
+	"iron-localstorage": {
+		"prefix": "iron-localstorage",
+		"body": "\r\n<iron-localstorage name=\"${1:my-app-storage}\" value=\"{{${0:value}}}\"></iron-localstorage>\r\n",
+		"description": "",
+		"scope": "text.html"
+	},
+	"iron-media-query": {
+		"prefix": "iron-media-query",
+		"body": "\r\n<iron-media-query query=\"${1:min-width: 640px}\" query-matches=\"{{${2:largeScreen}}}\">\r\n</iron-media-query>\r\n",
+		"description": "",
+		"scope": "text.html"
+	},
+	"iron-meta": {
+		"prefix": "iron-meta",
+		"body": "\r\n<iron-meta key=\"${1:info}\"></iron-meta>\r\n",
+		"description": "",
+		"scope": "text.html"
+	},
+	"iron-pages": {
+		"prefix": "iron-pages",
+		"body": "\r\n<iron-pages selected=\"${1:0}\">\r\n\t<section>$2</section>\r\n\t<section>$3</section>\r\n\t<section>$4</section>\r\n</iron-pages>\r\n",
+		"description": "",
+		"scope": "text.html"
+	},
+	"iron-selector": {
+		"prefix": "iron-selector",
+		"body": "\r\n<iron-selector selected=\"${1:0}\">\r\n\t$0\r\n</iron-selector>\r\n",
+		"description": "",
+		"scope": "text.html"
+	},
+	"neon-animated-pages": {
+		"prefix": "neon-animated-pages",
+		"body": "\r\n<neon-animated-pages selected=\"${1:0}\" entry-animation=\"${2:slide-from-right-animation}\" exit-animation=\"${3:slide-left-animation}\">\r\n    <neon-animatable>$4</neon-animatable>\r\n    <neon-animatable>$5</neon-animatable>\r\n    <neon-animatable>$6</neon-animatable>\r\n</neon-animated-pages>\r\n",
+		"description": "",
+		"scope": "text.html"
+	},
+	"paper-autogrow-textarea": {
+		"prefix": "paper-autogrow-textarea",
+		"body": "\r\n<paper-autogrow-textarea id=\"${1:a1}\">\r\n\t<textarea id=\"${2:t1}\"></textarea>\r\n<paper-autogrow-textarea>\r\n",
+		"description": "",
+		"scope": "text.html"
+	},
+	"paper-button": {
+		"prefix": "paper-button",
+		"body": "\r\n<paper-button${1: raised}>$0</paper-button>\r\n",
+		"description": "",
+		"scope": "text.html"
+	},
+	"paper-card": {
+		"prefix": "paper-card",
+		"body": "\r\n<paper-card heading=\"${1:Card title}\"${2: image=\"$3\"} elevation=\"${4:1}\" animated-shadow=\"${5:false}\">\r\n  <div class=\"card-content\">$6</div>\r\n  <div class=\"card-actions\">\r\n    $7\r\n  </div>\r\n</paper-card>\r\n",
+		"description": "",
+		"scope": "text.html"
+	},
+	"paper-checkbox": {
+		"prefix": "paper-checkbox",
+		"body": "\r\n<paper-checkbox${1: checked}></paper-checkbox>\r\n",
+		"description": "",
+		"scope": "text.html"
+	},
+	"paper-dialog": {
+		"prefix": "paper-dialog",
+		"body": "\r\n<paper-dialog>\r\n\t<h2>${1:Dialog Title}</h2>\r\n\t<paper-dialog-scrollable>\r\n\t\t$0\r\n\t</paper-dialog-scrollable>\r\n</paper-dialog>\r\n",
+		"description": "",
+		"scope": "text.html"
+	},
+	"paper-dialog1": {
+		"prefix": "paper-dialog",
+		"body": "\r\n<paper-dialog>\r\n\t<h2>${1:Dialog Title}</h2>\r\n\t$0\r\n</paper-dialog>\r\n",
+		"description": "",
+		"scope": "text.html"
+	},
+	"paper-drawer-panel": {
+		"prefix": "paper-drawer-panel",
+		"body": "\r\n<paper-drawer-panel>\r\n\t<paper-header-panel drawer>\r\n\t\t<paper-toolbar>${1:Menu}</paper-toolbar>\r\n\t\t$0\r\n\t</paper-header-panel>\r\n\t<paper-header-panel main>\r\n\t\t<paper-toolbar>\r\n\t\t\t<paper-icon-button icon=\"menu\" paper-drawer-toggle></paper-icon-button>\r\n\t\t\t<div class=\"flex\">${2:My App}</div>\r\n\t\t</paper-toolbar>\r\n\t</paper-header-panel>\r\n</paper-drawer-panel>\r\n",
+		"description": "",
+		"scope": "text.html"
+	},
+	"paper-fab": {
+		"prefix": "paper-fab",
+		"body": "\r\n<paper-fab icon=\"${1:add}\"></paper-fab>\r\n",
+		"description": "",
+		"scope": "text.html"
+	},
+	"paper-header-panel": {
+		"prefix": "paper-header-panel",
+		"body": "\r\n<paper-header-panel class=\"flex\">\r\n\t<paper-toolbar>${1}</paper-toolbar>\r\n\t<div>$0</div>\r\n</paper-header-panel>\r\n",
+		"description": "",
+		"scope": "text.html"
+	},
+	"paper-icon-button": {
+		"prefix": "paper-icon-button",
+		"body": "\r\n<paper-icon-button icon=\"$0\"></paper-icon-button>\r\n",
+		"description": "",
+		"scope": "text.html"
+	},
+	"paper-input": {
+		"prefix": "paper-input",
+		"body": "\r\n<paper-input label=\"$0\"></paper-input>\r\n",
+		"description": "",
+		"scope": "text.html"
+	},
+	"paper-item": {
+		"prefix": "paper-item",
+		"body": "\r\n<paper-item>$0</paper-item>\r\n",
+		"description": "",
+		"scope": "text.html"
+	},
+	"paper-material": {
+		"prefix": "paper-material",
+		"body": "\r\n<paper-material elevation=\"${1:1}\">\r\n\t$0\r\n</paper-material>\r\n",
+		"description": "",
+		"scope": "text.html"
+	},
+	"paper-menu": {
+		"prefix": "paper-menu",
+		"body": "\r\n<paper-menu${1: multi}>\r\n\t<paper-item>${2:Item 1}</paper-item>\r\n\t<paper-item>${3:Item 2}</paper-item>\r\n</paper-menu>\r\n",
+		"description": "",
+		"scope": "text.html"
+	},
+	"paper-progress": {
+		"prefix": "paper-progress",
+		"body": "\r\n<paper-progress value=\"${1:10}\"></paper-progress>\r\n",
+		"description": "",
+		"scope": "text.html"
+	},
+	"paper-radio-button": {
+		"prefix": "paper-radio-button",
+		"body": "\r\n<paper-radio-button></paper-radio-button>\r\n",
+		"description": "",
+		"scope": "text.html"
+	},
+	"paper-radio-group": {
+		"prefix": "paper-radio-group",
+		"body": "\r\n<paper-radio-group selected=\"${1:small}\">\r\n\t<paper-radio-button name=\"${2:small}\">${3:Small}</paper-radio-button>\r\n\t<paper-radio-button name=\"${4:medium}\">${5:Medium}</paper-radio-button>\r\n\t<paper-radio-button name=\"${6:large}\">${7:Large}</paper-radio-button>\r\n</paper-radio-group>\r\n",
+		"description": "",
+		"scope": "text.html"
+	},
+	"paper-ripple": {
+		"prefix": "paper-ripple",
+		"body": "\r\n<paper-ripple></paper-ripple>\r\n",
+		"description": "",
+		"scope": "text.html"
+	},
+	"paper-scroll-header-panel": {
+		"prefix": "paper-scroll-header-panel",
+		"body": "\r\n<paper-scroll-header-panel ${1:condenses} class=\"flex\">\r\n\t<paper-toolbar>\r\n\t\t<div>${2:My App}</div>\r\n\t</paper-toolbar>\r\n\t<div>${3:Page content}</div>\r\n</paper-scroll-header-panel>\r\n",
+		"description": "",
+		"scope": "text.html"
+	},
+	"paper-slider": {
+		"prefix": "paper-slider",
+		"body": "\r\n<paper-slider min=\"${1:10}\" max=\"${2:200}\" value=\"${3:110}\"></paper-slider>\r\n",
+		"description": "",
+		"scope": "text.html"
+	},
+	"paper-spinner": {
+		"prefix": "paper-spinner",
+		"body": "\r\n<paper-spinner${1: active}></paper-spinner>\r\n",
+		"description": "",
+		"scope": "text.html"
+	},
+	"paper-tab": {
+		"prefix": "paper-tab",
+		"body": "\r\n<paper-tab>$0</paper-tab>\r\n",
+		"description": "",
+		"scope": "text.html"
+	},
+	"paper-tabs": {
+		"prefix": "paper-tabs",
+		"body": "\r\n<paper-tabs selected=\"${1:0}\">\r\n\t<paper-tab>${2:TAB 1}</paper-tab>\r\n\t<paper-tab>${3:TAB 2}</paper-tab>\r\n\t<paper-tab>${4:TAB 3}</paper-tab>\r\n</paper-tabs>\r\n",
+		"description": "",
+		"scope": "text.html"
+	},
+	"paper-toast": {
+		"prefix": "paper-toast",
+		"body": "\r\n<paper-toast text=\"${1:Your draft has been discarded.}\">$0</paper-toast>\r\n",
+		"description": "",
+		"scope": "text.html"
+	},
+	"paper-toggle-button": {
+		"prefix": "paper-toggle-button",
+		"body": "\r\n<paper-toggle-button${1: checked}></paper-toggle-button>\r\n",
+		"description": "",
+		"scope": "text.html"
+	},
+	"paper-toolbar": {
+		"prefix": "paper-toolbar",
+		"body": "\r\n<paper-toolbar class=\"${1:tall}\">\r\n\t$0\r\n</paper-toolbar>\r\n",
+		"description": "",
+		"scope": "text.html"
+	},
+	"paper-tooltip": {
+		"prefix": "paper-tooltip",
+		"body": "\r\n<paper-tooltip\r\n  for=\"$1\"\r\n  position=\"${2:bottom}\"\r\n  offset=\"${3:14}\">\r\n  $0\r\n</paper-tooltip>\r\n",
+		"description": "Paper Tooltip element",
+		"scope": "text.html"
+	},
+	"pb": {
+		"prefix": "pb",
+		"body": "\r\n/**\r\n * A comment describing this behavior...\r\n * @polymerBehavior $1\r\n */\r\n<script>\r\n\t$1 = {\r\n\r\n\t};\r\n</script>\r\n",
+		"description": "polymer behavior",
+		"scope": "text.html"
+	},
+	"pefs": {
+		"prefix": "pefs",
+		"body": "\r\n<link rel=\"import\" href=\"$1/polymer/polymer.html\">\r\n\r\n<!--\r\nA comment describing this element\r\n\r\nExample:\r\n\r\n    <my-elem></my-elem>\r\n\r\nExample:\r\n\r\n    <my-elem>\r\n      <h2>Hello my-elem</h2>\r\n    </my-elem>\r\n\r\n@demo demo/index.html\r\n-->\r\n\r\n<dom-module id=\"$1\">\r\n\t<template>\r\n\t\t<style>\r\n\t\t\t:host {\r\n\t\t\t\tdisplay: block;\r\n\t\t\t}\r\n\t\t</style>\r\n\t\t$4\r\n\t</template>\r\n\t<script>\r\n\t\t(function() {\r\n\t\t\t'use strict';\r\n\r\n\t\t\tPolymer({\r\n\t\t\t\tis: '$1'\r\n\t\t\t});\r\n\t\t})();\r\n\t</script>\r\n</dom-module>\r\n",
+		"description": "polymer element full strict",
+		"scope": "text.html"
+	},
+	"pes": {
+		"prefix": "pes",
+		"body": "\r\n<!--\r\nA comment describing this element.\r\n\r\nExample:\r\n\r\n    <my-elem></my-elem>\r\n\r\nExample:\r\n\r\n    <my-elem>\r\n      <h2>Hello my-elem</h2>\r\n    </my-elem>\r\n\r\n@demo demo/index.html\r\n-->\r\n\r\n<dom-module id=\"$1\">\r\n\t<link rel=\"import\" type=\"css\" href=\"$1.css\">\r\n\t<template>\r\n\t\t$4\r\n\t</template>\r\n\t<script>\r\n\t\tPolymer({\r\n\t\t\tis: '$1'\r\n\t\t});\r\n\t</script>\r\n</dom-module>\r\n",
+		"description": "polymer element, external styles",
+		"scope": "text.html"
+	},
+	"pe": {
+		"prefix": "pe",
+		"body": "\r\n<!--\r\nA comment describing this element\r\n\r\nExample:\r\n\r\n    <my-elem></my-elem>\r\n\r\nExample:\r\n\r\n    <my-elem>\r\n      <h2>Hello my-elem</h2>\r\n    </my-elem>\r\n\r\n@demo demo/index.html\r\n-->\r\n\r\n<dom-module id=\"$1\">\r\n\t<template>\r\n\t\t<style>\r\n\t\t\t:host {\r\n\t\t\t\tdisplay: block;\r\n\t\t\t}\r\n\t\t</style>\r\n\t\t$4\r\n\t</template>\r\n\t<script>\r\n\t\tPolymer({\r\n\t\t\tis: '$1'\r\n\t\t});\r\n\t</script>\r\n</dom-module>\r\n",
+		"description": "polymer element",
+		"scope": "text.html"
+	},
+	"domb": {
+		"prefix": "domb",
+		"body": "\r\n<template is=\"dom-bind\">\r\n\t$0\r\n</template>\r\n",
+		"description": "Template \"dom-bind\"",
+		"scope": "text.html"
+	},
+	"domi": {
+		"prefix": "domi",
+		"body": "\r\n<template is=\"dom-if\" if={{${1:isEnabled}}}>\r\n\t$0\r\n</template>\r\n",
+		"description": "Template \"dom-if\"",
+		"scope": "text.html"
+	},
+	"domr": {
+		"prefix": "domr",
+		"body": "\r\n<template is=\"dom-repeat\" items={{${1:array}}} \r\n\tas=${2:item} index-as=${3:index}\r\n\tfilter=\"${4:isHandler}\" sort=\"${5:sortHandler}\" observe=\"${6:itemField1 itemField2}\">\r\n\t<!-- {{${2:item}}} and {{${3:index}}} can be used in this binding scope -->\r\n\t$0\r\n</template>\r\n",
+		"description": "Template \"dom-repeat\"",
+		"scope": "text.html"
+	},
+	"template": {
+		"prefix": "template",
+		"body": "\r\n<template$1>$0</template>\r\n",
+		"description": "template",
+		"scope": "text.html"
+	},
+	"webcomponents": {
+		"prefix": "webcomponents",
+		"body": "\r\n<script src=\"${0:bower_components}/webcomponentsjs/webcomponents-lite.js\"></script>\r\n",
+		"description": "",
+		"scope": "text.html"
+	}
+}
