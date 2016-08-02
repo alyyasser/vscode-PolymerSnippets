@@ -1,4 +1,4 @@
-# TO-DO List
+# TODO List
 
 ## Project
 
@@ -8,8 +8,8 @@
 ## Snippets
 
 - [ ] HTML import
-    - [ ] base
-    - [ ] app-elements
+    - [x] base
+    - [x] app-elements
     - [ ] iron-elements
     - [ ] paper-elements
     - [ ] google-web-components
