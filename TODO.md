@@ -1,9 +1,11 @@
-# TODO List
+# TODO List (release: v0.1.0)
 
 ## Project
 
 - [ ] README.md: update snippets table content
 - [ ] create DEMO for snippets
+  - [ ] demo gif images
+  - [ ] table of contents
 
 ## Snippets
 
