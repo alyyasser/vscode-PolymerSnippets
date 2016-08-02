@@ -1,2 +1,2 @@
-*.cson
-snippets/snippets-from-sublime.json
+atom-snippets/*
+sublime-snippets/*

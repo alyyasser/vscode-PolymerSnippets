@@ -1,9 +1,21 @@
 {
-    "name": "vscode-PolymerSnippets",
+    "name": "vscode-polymer-snippets",
     "displayName": "Polymer Snippets for VSCode",
     "description": "Polymer Snippets for VSCode based on Atom Polymer Snippets and Sublime Polymer Snippets by Rob Dodson",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "publisher": "NgekNgok",
+    "galleryBanner": {
+        "color": "#0D47A1",
+        "theme": "dark"
+    },
+    "bugs": {
+        "url": "https://github.com/alyyasser/vscode-PolymerSnippets/issues"
+    },
+    "homepage": "https://github.com/alyyasser/vscode-PolymerSnippets/blob/master/README.md",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/alyyasser/vscode-PolymerSnippets.git"
+    },
     "engines": {
         "vscode": "^1.0.0"
     },
@@ -11,11 +23,12 @@
         "Snippets"
     ],
     "contributes": {
-        "snippets": [
-            {
-                "language": "html",
-                "path": "./snippets/snippets.json"
-            }
-        ]
+        "snippets": [{
+            "language": "html",
+            "path": "./snippets/html.json"
+        }, {
+            "language": "javascript",
+            "path": "./snippets/javascript.json"
+        }]
     }
 }

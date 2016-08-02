@@ -1,65 +1,49 @@
-# vscode-PolymerSnippets README
+# Polymer Snippets for VSCode
 
-This is the README for your extension "vscode-PolymerSnippets". After writing up a brief description, we recommend including the following sections.
+[Polymer Snippets for VSCode][marketplace-url] based on [Atom Polymer Snippets][atom-polymer-url] and [Sublime Polymer Snippets][sublime-polymer-url] by [Rob Dodson][rob-dodson-url].
 
-## Features
+## Installation
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+1. Visit [VSCode Market: Polymer Snippets for VSCode][marketplace-url].<br><br>**OR**
 
-For example if there is an image subfolder under your extension project workspace:
+2. By VSCode
+   * Open VSCode
+   * Launch VS Code Quick Open (press **Ctrl+P**) 
+   * Paste the following command
 
-\!\[feature X\]\(images/feature-x.png\)
+     ```
+     ext install vscode-custom-snippets
+     ```
+   * Press **Enter** to search the extension
+   * Select **Custom Snippets** 
+   * Install
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+> **Tip:** If you open [README][readme-url] on GitHub, you can install [Clipboardy][clipboardy-chrome-webstore], a Chrome extension, for copying the command listed above to clipboard.
+> For more information, please visit [Clipboardy Chrome Extension Homepage][clipboardy-homepage].
 
-## Requirements
+## Usage
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+Type snippet prefix, and IntelliSense will show the snippet. If IntelliSense doesn't show the snippet, press **Ctrl+Space** and then **Enter** to insert the snippet.
 
-## Extension Settings
+Snippet Name | Prefix | Description
+--- | --- | ---
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+## License
 
-For example:
+[Polymer Snippets for VSCode License][license-url] © Aly Yasser Pranajaya
 
-This extension contributes the following settings:
+[Atom Polymer Snippets License][rob-dodson-license-url] © Rob Dodson
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+[Sublime Polymer Snippets License][rob-dodson-license-url] © Rob Dodson
 
-## Known Issues
+[marketplace-url]: https://marketplace.visualstudio.com/items?itemName=NgekNgok.vscode-polymer-snippets
+[readme-url]: https://github.com/alyyasser/vscode-PolymerSnippets/blob/master/README.md
+[license-url]: https://github.com/alyyasser/vscode-PolymerSnippets/blob/master/LICENSE
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+[atom-polymer-url]: https://github.com/robdodson/Atom-PolymerSnippets
+[sublime-polymer-url]: https://github.com/robdodson/PolymerSnippets
+[rob-dodson-url]: https://github.com/robdodson
+[rob-dodson-license-url]: http://robdodson.mit-license.org/
 
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on OSX or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on OSX or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (OSX) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+[clipboardy-chrome-webstore]: https://chrome.google.com/webstore/detail/clipboardy/gkafpbdjggkmmngaamlghmigadfaalhc
+[clipboardy-homepage]: https://rainsoft.io/clipboardy-chrome-extension
