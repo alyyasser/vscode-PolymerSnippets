@@ -12,7 +12,7 @@
    * Paste the following command
 
      ```
-     ext install vscode-custom-snippets
+     ext install vscode-polymer-snippets
      ```
    * Press **Enter** to search the extension
    * Select **Custom Snippets** 
