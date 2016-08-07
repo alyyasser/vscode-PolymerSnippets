@@ -1,24 +1,14 @@
-# TODO List (release: v0.1.0)
+# TODO List
 
-## Project
-
-- [ ] README.md: update snippets table content
-- [ ] create DEMO for snippets
-  - [ ] demo gif images
-  - [ ] table of contents
-
-## Snippets
+## Release: v0.1.0
 
 - [ ] HTML import
   - [x] base
   - [x] app-elements
-  - [ ] iron-elements
+  - [x] iron-elements
   - [ ] paper-elements
   - [ ] google-web-components
-  - [ ] gold-elements
   - [ ] neon-elements
-  - [ ] platinum-elements
-  - [ ] molecules
 - [ ] HTML template
   - [ ] with Web Components polyfill
   - [ ] with Web Components polyfill load when not supported by browser
@@ -58,7 +48,22 @@
   - [ ] iron-elements (fe)
   - [ ] paper-elements (md)
   - [ ] google-web-components (go)
-  - [ ] gold-elements (au)
   - [ ] neon-elements (ne)
+
+## Release: v0.2.0
+
+- [ ] HTML import
+  - [ ] gold-elements
+  - [ ] platinum-elements
+  - [ ] molecules
+- [ ] Polymer elements
+  - [ ] gold-elements (au)
   - [ ] platinum-elements (pt)
   - [ ] molecules (mo)
+
+## Others
+
+- [ ] README.md: update snippets table content
+- [ ] create DEMO for snippets
+  - [ ] demo gif images
+  - [ ] table of contents

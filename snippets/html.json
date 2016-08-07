@@ -1,18 +1,23 @@
 {
     // HTML Import Snippets
     // ->> BEGIN <<-
-    // ->> base <<-
+    // --> base <--
     "html-import": {
         "prefix": "hi",
         "body": "<link rel=\"import\" href=\"${1:path-and-filename}.html\">$0",
         "description": "HTML Import"
     },
+    "html-import-polymer": {
+        "prefix": "hi-polymer",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/polymer/polymer.html\">$0",
+        "description": "HTML Import: Polymer"
+    },
     "html-import-shared-styles": {
         "prefix": "hi-styles",
         "body": "<link rel=\"import\" href=\"${1:path}/${2:shared-styles}.html\">$0",
-        "description": "HTML Import"
+        "description": "HTML Import: Shared Styles"
     },
-    // ->> app-elements <<-
+    // --> app-elements <--
     "html-import-app-elements": {
         "prefix": "hi-app",
         "body": "<link rel=\"import\" href=\"${1:../}bower_components/app-elements/app-elements.html\">$0",
@@ -57,7 +62,289 @@
         "prefix": "hi-app-indexeddb",
         "body": "<link rel=\"import\" href=\"${1:../}bower_components/app-storage/app-indexeddb-mirror/app-indexeddb-mirror.html\">$0",
         "description": "HTML Import: app-indexeddb-mirror"
+    },
+    // --> iron-elements <--
+    "html-import-iron-elements": {
+        "prefix": "hi-fe",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-elements/iron-elements.html\">$0",
+        "description": "HTML Import: iron-elements"
+    },
+    "html-import-iron-a11y-announcer": {
+        "prefix": "hi-fe-a11y-announcer",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-a11y-announcer/iron-a11y-announcer.html\">$0",
+        "description": "HTML Import: iron-a11y-announcer"
+    },
+    "html-import-a11y-keys": {
+        "prefix": "hi-fe-a11y-keys",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-a11y-keys/iron-a11y-keys.html\">$0",
+        "description": "HTML Import: iron-a11y-keys"
+    },
+    "html-import-iron-ajax": {
+        "prefix": "hi-fe-ajax",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-ajax/iron-ajax.html\">$0",
+        "description": "HTML Import: iron-ajax"
+    },
+    "html-import-iron-autogrow-textarea": {
+        "prefix": "hi-fe-textarea",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-autogrow-textarea/iron-autogrow-textarea.html\">$0",
+        "description": "HTML Import: iron-autogrow-textarea"
+    },
+    "html-import-iron-button-state": {
+        "prefix": "hi-fe-button-state",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-behaviors/iron-button-state.html\">$0",
+        "description": "HTML Import: iron-behaviors -> iron-button-state"
+    },
+    "html-import-iron-checked-element-behavior": {
+        "prefix": "hi-fe-checked-element",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-checked-element-behavior/iron-checked-element-behavior.html\">$0",
+        "description": "HTML Import: iron-checked-element-behavior"
+    },
+    "html-import-iron-collapse": {
+        "prefix": "hi-fe-collapse",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-collapse/iron-collapse.html\">$0",
+        "description": "HTML Import: iron-collapse"
+    },
+    "html-import-iron-component-page": {
+        "prefix": "hi-fe-component",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-component-page/iron-component-page.html\">$0",
+        "description": "HTML Import: iron-component-page"
+    },
+    "html-import-iron-demo-snippet": {
+        "prefix": "hi-fe-demo",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-demo-helpers/demo-snippet.html\">$0",
+        "description": "HTML Import: iron-demo-helpers -> demo-snippet"
+    },
+    "html-import-iron-doc-viewer": {
+        "prefix": "hi-fe-doc",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-doc-viewer/iron-doc-viewer.html\">$0",
+        "description": "HTML Import: iron-doc-viewer"
+    },
+    "html-import-iron-dropdown": {
+        "prefix": "hi-fe-dropdown",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-dropdown/iron-dropdown.html\">$0",
+        "description": "HTML Import: iron-dropdown"
+    },
+    "html-import-iron-fit-behavior": {
+        "prefix": "hi-fe-fit",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-fit-behavior/iron-fit-behavior.html\">$0",
+        "description": "HTML Import: iron-fit-behavior"
+    },
+    "html-import-iron-flex-layout": {
+        "prefix": "hi-fe-flex",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-flex-layout/iron-flex-layout.html\">$0",
+        "description": "HTML Import: iron-flex-layout"
+    },
+    "html-import-iron-flex-layout-classes": {
+        "prefix": "hi-fe-flex-classes",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-flex-layout/iron-flex-layout-classes.html\">$0",
+        "description": "HTML Import: iron-flex-layout-classes"
+    },
+    "html-import-iron-form": {
+        "prefix": "hi-fe-form",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-form/iron-form.html\">$0",
+        "description": "HTML Import: iron-form"
+    },
+    "html-import-iron-form-element-behavior": {
+        "prefix": "hi-fe-form-element",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-form-element-behavior/iron-form-element-behavior.html\">$0",
+        "description": "HTML Import: iron-form-element-behavior"
+    },
+    "html-import-iron-icon": {
+        "prefix": "hi-fe-ic",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-icon/iron-icon.html\">$0",
+        "description": "HTML Import: iron-icon"
+    },
+    "html-import-iron-icons": {
+        "prefix": "hi-fe-ics",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-icons/iron-icons.html\">$0",
+        "description": "HTML Import: iron-icons"
+    },
+    "html-import-iron-icons-av": {
+        "prefix": "hi-fe-ics-av",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-icons/av-icons.html\">$0",
+        "description": "HTML Import: av-icons"
+    },
+    "html-import-iron-icons-communication": {
+        "prefix": "hi-fe-ics-communication",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-icons/communication-icons.html\">$0",
+        "description": "HTML Import: communication-icons"
+    },
+    "html-import-iron-icons-device": {
+        "prefix": "hi-fe-ics-device",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-icons/device-icons.html\">$0",
+        "description": "HTML Import: device-icons"
+    },
+    "html-import-iron-icons-editor": {
+        "prefix": "hi-fe-ics-editor",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-icons/editor-icons.html\">$0",
+        "description": "HTML Import: editor-icons"
+    },
+    "html-import-iron-icons-hardware": {
+        "prefix": "hi-fe-ics-hardware",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-icons/hardware-icons.html\">$0",
+        "description": "HTML Import: hardware-icons"
+    },
+    "html-import-iron-icons-image": {
+        "prefix": "hi-fe-ics-image",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-icons/image-icons.html\">$0",
+        "description": "HTML Import: image-icons"
+    },
+    "html-import-iron-icons-maps": {
+        "prefix": "hi-fe-ics-maps",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-icons/maps-icons.html\">$0",
+        "description": "HTML Import: maps-icons"
+    },
+    "html-import-iron-icons-notification": {
+        "prefix": "hi-fe-ics-notification",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-icons/notification-icons.html\">$0",
+        "description": "HTML Import: notification-icons"
+    },
+    "html-import-iron-icons-places": {
+        "prefix": "hi-fe-ics-places",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-icons/places-icons.html\">$0",
+        "description": "HTML Import: places-icons"
+    },
+    "html-import-iron-icons-social": {
+        "prefix": "hi-fe-ics-social",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-icons/social-icons.html\">$0",
+        "description": "HTML Import: social-icons"
+    },
+    "html-import-iron-icons-update": {
+        "prefix": "hi-fe-ics-update",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-icons/update-icons.html\">$0",
+        "description": "HTML Import: update-icons"
+    },
+    "html-import-iron-iconset": {
+        "prefix": "hi-fe-icset",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-iconset/iron-iconset.html\">$0",
+        "description": "HTML Import: iron-iconset"
+    },
+    "html-import-iron-iconset-svg": {
+        "prefix": "hi-fe-icset-svg",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-iconset-svg/iron-iconset-svg.html\">$0",
+        "description": "HTML Import: iron-iconset-svg"
+    },
+    "html-import-iron-image": {
+        "prefix": "hi-fe-image",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-image/iron-image.html\">$0",
+        "description": "HTML Import: iron-image"
+    },
+    "html-import-iron-input": {
+        "prefix": "hi-fe-input",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-input/iron-input.html\">$0",
+        "description": "HTML Import: iron-input"
+    },
+    "html-import-iron-jsonp-library": {
+        "prefix": "hi-fe-jsonp",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-jsonp-library/iron-jsonp-library.html\">$0",
+        "description": "HTML Import: iron-jsonp-library"
+    },
+    "html-import-iron-label": {
+        "prefix": "hi-fe-label",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-label/iron-label.html\">$0",
+        "description": "HTML Import: iron-label"
+    },
+    "html-import-iron-list": {
+        "prefix": "hi-fe-list",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-list/iron-list.html\">$0",
+        "description": "HTML Import: iron-list"
+    },
+    "html-import-iron-localstorage": {
+        "prefix": "hi-fe-local",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-localstorage/iron-localstorage.html\">$0",
+        "description": "HTML Import: iron-localstorage"
+    },
+    "html-import-iron-location": {
+        "prefix": "hi-fe-location",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-location/iron-location.html\">$0",
+        "description": "HTML Import: iron-location"
+    },
+    "html-import-iron-media-query": {
+        "prefix": "hi-fe-media-query",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-media-query/iron-media-query.html\">$0",
+        "description": "HTML Import: iron-media-query"
+    },
+    "html-import-iron-menu-behavior": {
+        "prefix": "hi-fe-menu",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-menu-behavior/iron-menu-behavior.html\">$0",
+        "description": "HTML Import: iron-menu-behavior"
+    },
+    "html-import-iron-menubar-behavior": {
+        "prefix": "hi-fe-menubar",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-menu-behavior/iron-menubar-behavior.html\">$0",
+        "description": "HTML Import: iron-menubar-behavior"
+    },
+    "html-import-iron-meta": {
+        "prefix": "hi-fe-meta",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-meta/iron-meta.html\">$0",
+        "description": "HTML Import: iron-meta"
+    },
+    "html-import-iron-overlay-behavior": {
+        "prefix": "hi-fe-overlay",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-overlay-behavior/iron-overlay-behavior.html\">$0",
+        "description": "HTML Import: iron-overlay-behavior"
+    },
+    "html-import-iron-pages": {
+        "prefix": "hi-fe-pages",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-pages/iron-pages.html\">$0",
+        "description": "HTML Import: iron-pages"
+    },
+    "html-import-iron-range-behavior": {
+        "prefix": "hi-fe-range",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-range-behavior/iron-range-behavior.html\">$0",
+        "description": "HTML Import: iron-range-behavior"
+    },
+    "html-import-iron-resizable-behavior": {
+        "prefix": "hi-fe-resize",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-resizable-behavior/iron-resizable-behavior.html\">$0",
+        "description": "HTML Import: iron-resizable-behavior"
+    },
+    "html-import-iron-scroll-target-behavior": {
+        "prefix": "hi-fe-scroll-target",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-scroll-target-behavior/iron-scroll-target-behavior.html\">$0",
+        "description": "HTML Import: iron-scroll-target-behavior"
+    },
+    "html-import-iron-scroll-threshold": {
+        "prefix": "hi-fe-scroll-threshold",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-scroll-threshold/iron-scroll-threshold.html\">$0",
+        "description": "HTML Import: iron-scroll-threshold"
+    },
+    "html-import-iron-selector": {
+        "prefix": "hi-fe-selector",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-selector/iron-selector.html\">$0",
+        "description": "HTML Import: iron-selector"
+    },
+    "html-import-iron-signals": {
+        "prefix": "hi-fe-signals",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-signals/iron-signals.html\">$0",
+        "description": "HTML Import: iron-signals"
+    },
+    "html-import-iron-swipeable-container": {
+        "prefix": "hi-fe-swipeable",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-swipeable-container/iron-swipeable-container.html\">$0",
+        "description": "HTML Import: iron-swipeable-container"
+    },
+    "html-import-iron-validatable-behavior": {
+        "prefix": "hi-fe-validatable",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-validatable-behavior/iron-validatable-behavior.html\">$0",
+        "description": "HTML Import: iron-validatable-behavior"
+    },
+    "html-import-iron-validator-behavior": {
+        "prefix": "hi-fe-validator",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-validator-behavior/iron-validator-behavior.html\">$0",
+        "description": "HTML Import: iron-validator-behavior"
     }
+    // --> paper-elements <--
+    // --> google-web-components <--
+    // --> gold-elements <--
+    // --> neon-elements <--
+    // --> platinum-elements <--
+    // --> molecules <--
     // ->> END <<-
 
+    // HTML Template Snippets
+    // ->> BEGIN <<-
+    // --> with Web Components polyfill <--
+    // --> with Web Components polyfill load when not supported by browser <--
+    // ->> END <<-
 }
