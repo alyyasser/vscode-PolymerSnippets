@@ -25,7 +25,13 @@
     "contributes": {
         "snippets": [{
             "language": "html",
-            "path": "./snippets/html.json"
+            "path": "./snippets/html-import.json"
+        }, {
+            "language": "html",
+            "path": "./snippets/html-import-app.json"
+        }, {
+            "language": "html",
+            "path": "./snippets/html-import-fe.json"
         }, {
             "language": "javascript",
             "path": "./snippets/javascript.json"

@@ -1,69 +1,4 @@
 {
-    // HTML Import Snippets
-    // ->> BEGIN <<-
-    // --> base <--
-    "html-import": {
-        "prefix": "hi",
-        "body": "<link rel=\"import\" href=\"${1:path-and-filename}.html\">$0",
-        "description": "HTML Import"
-    },
-    "html-import-polymer": {
-        "prefix": "hi-polymer",
-        "body": "<link rel=\"import\" href=\"${1:../}bower_components/polymer/polymer.html\">$0",
-        "description": "HTML Import: Polymer"
-    },
-    "html-import-shared-styles": {
-        "prefix": "hi-styles",
-        "body": "<link rel=\"import\" href=\"${1:path}/${2:shared-styles}.html\">$0",
-        "description": "HTML Import: Shared Styles"
-    },
-    // --> app-elements <--
-    "html-import-app-elements": {
-        "prefix": "hi-app",
-        "body": "<link rel=\"import\" href=\"${1:../}bower_components/app-elements/app-elements.html\">$0",
-        "description": "HTML Import: app-elements"
-    },
-    "html-import-app-layout": {
-        "prefix": "hi-app-layout",
-        "body": "<link rel=\"import\" href=\"${1:../}bower_components/app-layout/app-layout.html\">$0",
-        "description": "HTML Import: app-layout"
-    },
-    "html-import-app-localize": {
-        "prefix": "hi-app-localize",
-        "body": "<link rel=\"import\" href=\"${1:../}bower_components/app-localize-behavior/app-localize-behavior.html\">$0",
-        "description": "HTML Import: app-localize-behavior"
-    },
-    "html-import-app-pouchdb": {
-        "prefix": "hi-app-pouchdb",
-        "body": "<link rel=\"import\" href=\"${1:../}bower_components/app-pouchdb/app-pouchdb-${2}.html\">$0",
-        "description": "HTML Import: app-puchdb-*"
-    },
-    "html-import-app-route": {
-        "prefix": "hi-app-route",
-        "body": "<link rel=\"import\" href=\"${1:../}bower_components/app-route/app-route.html\">$0",
-        "description": "HTML Import: app-route"
-    },
-    "html-import-app-location": {
-        "prefix": "hi-app-location",
-        "body": "<link rel=\"import\" href=\"${1:../}bower_components/app-route/app-location.html\">$0",
-        "description": "HTML Import: app-location"
-    },
-    "html-import-app-route-converter": {
-        "prefix": "hi-app-route-converter",
-        "body": "<link rel=\"import\" href=\"${1:../}bower_components/app-route/app-route-converter.html\">$0",
-        "description": "HTML Import: app-route-converter"
-    },
-    "html-import-app-localstorage-document": {
-        "prefix": "hi-app-localstorage",
-        "body": "<link rel=\"import\" href=\"${1:../}bower_components/app-storage/app-localstorage/app-localstorage-document.html\">$0",
-        "description": "HTML Import: app-localstorage-document"
-    },
-    "html-import-app-indexeddb-mirror": {
-        "prefix": "hi-app-indexeddb",
-        "body": "<link rel=\"import\" href=\"${1:../}bower_components/app-storage/app-indexeddb-mirror/app-indexeddb-mirror.html\">$0",
-        "description": "HTML Import: app-indexeddb-mirror"
-    },
-    // --> iron-elements <--
     "html-import-iron-elements": {
         "prefix": "hi-fe",
         "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-elements/iron-elements.html\">$0",
@@ -334,17 +269,4 @@
         "body": "<link rel=\"import\" href=\"${1:../}bower_components/iron-validator-behavior/iron-validator-behavior.html\">$0",
         "description": "HTML Import: iron-validator-behavior"
     }
-    // --> paper-elements <--
-    // --> google-web-components <--
-    // --> gold-elements <--
-    // --> neon-elements <--
-    // --> platinum-elements <--
-    // --> molecules <--
-    // ->> END <<-
-
-    // HTML Template Snippets
-    // ->> BEGIN <<-
-    // --> with Web Components polyfill <--
-    // --> with Web Components polyfill load when not supported by browser <--
-    // ->> END <<-
 }

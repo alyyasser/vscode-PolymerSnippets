@@ -1,0 +1,17 @@
+{
+    "html-import": {
+        "prefix": "hi",
+        "body": "<link rel=\"import\" href=\"${1:path-and-filename}.html\">$0",
+        "description": "HTML Import"
+    },
+    "html-import-polymer": {
+        "prefix": "hi-polymer",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/polymer/polymer.html\">$0",
+        "description": "HTML Import: Polymer"
+    },
+    "html-import-shared-styles": {
+        "prefix": "hi-styles",
+        "body": "<link rel=\"import\" href=\"${1:path}/${2:shared-styles}.html\">$0",
+        "description": "HTML Import: Shared Styles"
+    }
+}
