@@ -5,15 +5,21 @@ const rootPath = "snippets/";
 class Main {
     public static run() {
         let files: Array<string> = getSnippetFiles(rootPath);
-        // console.log(files);
+        let snippets: Array<Snippet> = [];
 
         files.forEach(file => {
-            // console.log(rootPath + file);
-            // console.log(getSnippetRaw(rootPath + file));
-            let obj = JSON.parse(getSnippetRaw(rootPath + file));
-            let snippets = getSnippets(obj);
-            console.log(snippets);
+            let raw = getSnippetRaw(rootPath + file);
+            let obj = JSON.parse(raw);
+            let lines = raw.split('\r\n');
+            Object.keys(obj).forEach(key => {
+                let str = lines.filter((value) => {
+                    return value.indexOf(`"${key}"`) != -1;
+                })[0];
+                snippets.push(Snippet.parse(key, obj[key], file, lines.indexOf(str) + 1));
+            });
+            
         });
+
     }
 }
 
@@ -21,6 +27,8 @@ class Snippet {
     private _name: string;
     private _prefix: string;
     private _desc: string;
+    private _file: string;
+    private _line: number;
 
     constructor(name: string) {
         this.name = name;
@@ -49,6 +57,31 @@ class Snippet {
     set description(_desc: string) {
         this._desc = _desc;
     }
+
+    get file(): string {
+        return this._file;
+    }
+
+    set file(_file: string) {
+        this._file = _file;
+    }
+
+    get line(): number {
+        return this._line;
+    }
+
+    set line(_line: number) {
+        this._line = _line;
+    }
+
+    static parse(key:string, body: any, file:string, line:number): Snippet{
+        let snippet = new Snippet(key);
+        snippet.prefix = body['prefix'];
+        snippet.description = body['description'];
+        snippet.file = file;
+        snippet.line = line;
+        return snippet;
+    }
 }
 
 function getSnippetFiles(path: string): Array<string> {
@@ -57,19 +90,6 @@ function getSnippetFiles(path: string): Array<string> {
 
 function getSnippetRaw(path: string): string {
     return fs.readFileSync(path, 'utf8');
-}
-
-function getSnippets(obj: any): Array<Snippet> {
-    let snippets: Array<Snippet> = [];
-    Object.keys(obj).forEach(key => {
-        // console.log(key)
-        let snippet = new Snippet(key);
-        let body = obj[key];
-        snippet.prefix = body['prefix'];
-        snippet.description = body['description'];
-        snippets.push(snippet);
-    });
-    return snippets;
 }
 
 Main.run();
