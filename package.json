@@ -32,6 +32,9 @@
         }, {
             "language": "html",
             "path": "./snippets/html-import-fe.json"
+        }, {
+            "language": "html",
+            "path": "./snippets/html-import-ne.json"
         }]
     }
 }

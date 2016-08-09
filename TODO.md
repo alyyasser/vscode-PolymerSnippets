@@ -8,7 +8,7 @@
   - [x] iron-elements
   - [ ] paper-elements
   - [ ] google-web-components
-  - [ ] neon-elements
+  - [x] neon-elements
 - [ ] HTML template
   - [ ] with Web Components polyfill
   - [ ] with Web Components polyfill load when not supported by browser

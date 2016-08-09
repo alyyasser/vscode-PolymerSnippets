@@ -1,0 +1,7 @@
+{
+    "html-import-neon-animation": {
+        "prefix": "hi-ne",
+        "body": "<link rel=\"import\" href=\"${1:../}bower_components/neon-animation/neon-animation.html\">$0",
+        "description": "HTML Import: neon-animation"
+    }
+}
