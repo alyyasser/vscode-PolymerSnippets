@@ -1,4 +1,6 @@
 atom-snippets/*
 sublime-snippets/*
-tes.html
+typings/*
 TO-DO.md
+tsconfig.json
+snippets-usage-converter.ts
