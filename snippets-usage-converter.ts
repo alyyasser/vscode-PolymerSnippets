@@ -1,3 +1,5 @@
+// script usage: ts-node snippets-usage-converter.ts
+
 import fs = require('fs');
 
 const rootPath = "snippets/";
@@ -17,9 +19,22 @@ class Main {
                 })[0];
                 snippets.push(Snippet.parse(key, obj[key], file, lines.indexOf(str) + 1));
             });
-            
+
         });
 
+        let readme = fs.readFileSync('README.md', 'utf8');
+        let lines = readme.split('\n');
+        let start = lines.indexOf('--- | --- | ---') + 1;
+        let end = lines.indexOf('## License');
+        if (start < end - 1) {
+            lines.splice(start, end - start, null);
+        }
+        snippets.forEach(snippet => {
+            lines.splice(start, 0, snippet.buildUsageString());
+            lines.push(snippet.buildSourceLink());
+            start++;
+        })
+        fs.writeFileSync('README.md', lines.join('\n'));
     }
 }
 
@@ -74,7 +89,15 @@ class Snippet {
         this._line = _line;
     }
 
-    static parse(key:string, body: any, file:string, line:number): Snippet{
+    buildUsageString(): string {
+        return `[${this.name}][${this.name}-src] | \`${this.prefix}\` | ${this.description}`;
+    }
+
+    buildSourceLink(): string {
+        return `[${this.name}-src]: https://github.com/alyyasser/vscode-PolymerSnippets/tree/master/${rootPath}${this.file}#L${this.line}`;
+    }
+
+    static parse(key: string, body: any, file: string, line: number): Snippet {
         let snippet = new Snippet(key);
         snippet.prefix = body['prefix'];
         snippet.description = body['description'];
