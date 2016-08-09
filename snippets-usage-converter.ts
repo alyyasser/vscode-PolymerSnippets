@@ -27,7 +27,9 @@ class Main {
         let start = lines.indexOf('--- | --- | ---') + 1;
         let end = lines.indexOf('## License');
         if (start < end - 1) {
-            lines.splice(start, end - start, null);
+            let count = end - start;
+            lines.splice(start, count, null);
+            lines.splice(lines.length - count, count, null);
         }
         snippets.forEach(snippet => {
             lines.splice(start, 0, snippet.buildUsageString());
