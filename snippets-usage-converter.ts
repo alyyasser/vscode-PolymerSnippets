@@ -23,7 +23,7 @@ class Main {
         });
 
         let readme = fs.readFileSync('README.md', 'utf8');
-        let lines = readme.split('\n');
+        let lines = readme.split('\r\n');
         let start = lines.indexOf('--- | --- | ---') + 1;
         let end = lines.indexOf('## License');
         if (start < end - 1) {
@@ -36,7 +36,7 @@ class Main {
             lines.push(snippet.buildSourceLink());
             start++;
         })
-        fs.writeFileSync('README.md', lines.join('\n'));
+        fs.writeFileSync('README.md', lines.join('\r\n'));
     }
 }
 
