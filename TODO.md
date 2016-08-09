@@ -63,7 +63,7 @@
 
 ## Others
 
-- [ ] README.md: update snippets table content
+- [x] create automation script for updating snippets usage table
 - [ ] create DEMO for snippets
   - [ ] demo gif images
   - [ ] table of contents
